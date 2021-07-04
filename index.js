@@ -35,10 +35,9 @@ tools.forEach((tool)=>{
          tools.forEach((newTool)=>{
              newTool.classList.remove("active")
          })
-         if(!tool.classList.contains("active")){
-
-             tool.classList.add("active")
-         }
+         
+            tool.classList.toggle("active")
+         
          
     })
 })

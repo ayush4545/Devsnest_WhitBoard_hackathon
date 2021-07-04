@@ -47,6 +47,7 @@ list-style-type:none;
 
 .link{
     margin-right:0.2rem;
+    background-color: blanchedalmond;
 }
 
 .links  .Icon{
@@ -78,6 +79,7 @@ li:hover .Icon{
 
 .show-links{
     height: 10rem;
+  
 }
 
 @media screen and (min-width:768px){
@@ -206,7 +208,7 @@ aside .tools.active{
 }
 section{
     /* position: relative; */
-    background-color: yellow;
+    
     height:80vh;
     width:90vw;
     margin-top:1rem ;
@@ -251,12 +253,11 @@ section{
    .cancel{
        position: fixed;
        /* right:0.2rem; */
-       left:93%;
+       left:40vw;
        top:40%;
    }
     
     section{
-        background-color: green;
         position:absolute;
         top:120%;
         left:5.5%;
@@ -273,11 +274,18 @@ section{
 }
 .pencil.active ~ .container-2
 {
-    position: fixed;
+    position: absolute;
     display: inline-flex;
     flex-direction: column;
     border: .5px solid black;
-    left: 5.5%;
+    background-color: #fff;
+    box-shadow: 2px 3px 7px 1px rgba(0,0,0,0.63);
+    left:5.1rem;
+    top:-0.1rem;
+    width:3.5rem;
+    padding:0.3rem;
+    border-radius: 0.5rem;
+    transition: all .3s ease;
 }
 .pencil.active~ .triangle{
     z-index: 100;
@@ -287,15 +295,211 @@ section{
     border-width: 10px 0 10px 12px;
     border-color: transparent transparent transparent gray;
     display: inline-block;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     margin-left: 0px;
     position: absolute;
-    /* top:-50%; */
+    top:10px;
     left:100%;
-    background-color: aqua;
+    transform:rotate(-180deg);
+    transition: all .3s ease;
 
+}
+.pencil.active:hover~ .triangle{
+    left:110%;
+    transition: all .3s ease;
+}
+.pencil.active:hover~ .container-2{
+    left:5.4rem;
+    transition: all .3s ease;
+}
+.number{
+    margin-bottom: 1rem;
+    height:2rem;
+    font-size:1.5rem;
+    outline: none;
+}
+.colors{
+    margin-top: 1rem;
+    cursor: pointer;
 }
 .triangle{
   display: none;
 }
 
+.shapes.active~.container-3{
+    position: absolute;
+    display: inline-flex;
+    flex-direction: column;
+    border: .5px solid black;
+    background-color: #fff;
+    box-shadow: 2px 3px 7px 1px rgba(0,0,0,0.63);
+    left:4.5rem;
+    margin-top:-3.2rem;
+    margin-left:0.6rem;
+    width:5rem;
+    padding:0.3rem;
+    border-radius: 0.5rem;
+    transition: all .3s ease;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.shapes.active~.triangle3{
+     z-index: 100;
+     width: 0;
+     height: 0;
+     border-style: solid;
+     border-width: 10px 0 10px 12px;
+     border-color: transparent transparent transparent gray;
+     display: inline-block;
+     /* margin-bottom: 10px; */
+     margin-left: 0px;
+     position: absolute;
+     /* top:; */
+     /* bottom:2rem; */
+     margin-top:-2.5rem;
+     left:100%;
+     transform:rotate(-180deg);
+     transition: all .3s ease;
+}
+
+.shape.active:hover~ .triangle3{
+    margin-left:2rem;
+    transition: all .3s ease;
+    background-color: brown;
+}
+
+.shapes.active~.container-3 div{
+    background-color: #0A1931;
+    width:100%;
+    height:20%;
+    margin-top:0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0.6rem;
+    border-radius: 0.5rem;
+    color:white;
+    cursor: pointer;
+}
+
+.square{
+    font-size: 1.5rem;
+    
+}
+
+.shapes.active~.container-3 .rectangle div{
+    padding-bottom:0.1rem;
+    width:2.5rem;
+    height:0.8rem;
+    border:0.15rem solid white;
+    margin-bottom: 1rem;
+    border-radius: 0;
+}
+
+.circle{
+    font-size: 1.5rem;
+}
+
+
+.shapes.active~.container-3 .ellipse div{
+    width:2rem;
+    height:0.5rem;
+    border: 0.2rem solid #fff;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+}
+
+.container-3{
+    display: none;
+}
+
+
+
+.color.active~.container-4{
+    position: absolute;
+    display: inline-flex;
+    flex-direction: column;
+    border: .5px solid black;
+    background-color: #fff;
+    box-shadow: 2px 3px 7px 1px rgba(0,0,0,0.63);
+    left:4.5rem;
+    margin-top:-3.2rem;
+    margin-left:0.6rem;
+    width:5rem;
+    padding:0.3rem;
+    border-radius: 0.5rem;
+    transition: all .3s ease;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.color.active~.triangle4{
+     z-index: 100;
+     width: 0;
+     height: 0;
+     border-style: solid;
+     border-width: 10px 0 10px 12px;
+     border-color: transparent transparent transparent gray;
+     display: inline-block;
+     /* margin-bottom: 10px; */
+     margin-left: 0px;
+     position: absolute;
+     /* top:; */
+     /* bottom:2rem; */
+     margin-top:-2.5rem;
+     left:100%;
+     transform:rotate(-180deg);
+     transition: all .3s ease;
+}
+
+.color.active:hover~ .triangle4{
+    left:110%;
+    transition: all .3s ease;
+    
+}
+
+.color.active:hover~ .container-4{
+    left:5rem;
+    transition: all .3s ease;
+}
+.color.active~.container-4 div{
+    width:100%;
+    height:20%;
+    margin-top:0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0.6rem;
+    border-radius: 0.5rem;
+    color:white;
+    cursor: pointer;
+}
+
+
+.color.active~.container-4 .black{
+  background-color: black;
+}
+.color.active~.container-4 .red{
+  background-color: red;
+}
+.color.active~.container-4 .green{
+  background-color: green;
+}
+.color.active~.container-4 .yellow{
+  background-color: yellow;
+}
+.color.active~.container-4 .blue{
+  background-color: blue;
+  margin-bottom: 1rem;
+}
+
+
+
+
+
+.container-4{
+    display: none;
+}

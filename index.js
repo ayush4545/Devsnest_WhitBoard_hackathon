@@ -264,7 +264,7 @@ canvas.addEventListener("mousedown", startPaint);
 canvas.addEventListener("mouseup", endPaint);
 canvas.addEventListener("mousemove", draw);
 
-// Undo 
+/// Undo 
 const undo = document.getElementById("undo");
 undo.addEventListener("click", undoLastPoint);
 
@@ -280,7 +280,19 @@ function undoLastPoint() {
         reset();
     } else {
         index--;
-        history.pop();
+    
+        ctx.putImageData(history[index], 0, 0);
+    }
+}
+
+// Redo
+const redo = document.getElementById("redo");
+redo.addEventListener("click", redoLastPoint);
+
+function redoLastPoint() {
+    console.log(index);
+    if(index < history.length - 1) {
+        index++;
         ctx.putImageData(history[index], 0, 0);
     }
 }

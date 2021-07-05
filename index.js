@@ -268,9 +268,16 @@ canvas.addEventListener("mousemove", draw);
 const undo = document.getElementById("undo");
 undo.addEventListener("click", undoLastPoint);
 
+function reset() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    history = [];
+    index = -1;
+}
+
 function undoLastPoint() {
+    console.log(index);
     if(index <= 0) {
-        clearCanvas();
+        reset();
     } else {
         index--;
         history.pop();
